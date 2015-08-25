@@ -242,6 +242,9 @@ class Subscribe(object):
         """
         return self._subscribe("current_screen_change", func)
 
+    def on_resize(self, func):
+        return self._subscribe("on_resize", func)
+
 subscribe = Subscribe()
 
 

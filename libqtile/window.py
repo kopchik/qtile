@@ -1233,6 +1233,7 @@ class Window(_Window):
             Add dw and dh to size of window
         """
         self.tweak_float(dw=dw, dh=dh)
+        hook.fire("on_resize", self)
 
     def cmd_set_position_floating(self, x, y, curx, cury):
         """
@@ -1245,6 +1246,7 @@ class Window(_Window):
             Set window dimensions to w and h
         """
         self.tweak_float(w=w, h=h)
+        hook.fire("on_resize", self)
 
     def cmd_get_position(self):
         return self.getposition()
