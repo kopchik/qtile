@@ -1227,6 +1227,7 @@ class Window(_Window):
             Move window by dx and dy
         """
         self.tweak_float(dx=dx, dy=dy)
+        hook.fire("on_move", self)
 
     def cmd_resize_floating(self, dw, dh, curx, cury):
         """

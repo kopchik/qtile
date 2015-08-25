@@ -245,6 +245,9 @@ class Subscribe(object):
     def on_resize(self, func):
         return self._subscribe("on_resize", func)
 
+    def on_move(self, func):
+        return self._subscribe("on_move", func)
+
 subscribe = Subscribe()
 
 
